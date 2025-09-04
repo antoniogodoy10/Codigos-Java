@@ -10,7 +10,16 @@ public class master {
         lista.add("Leo");
         lista.add("Antonio");
 
-       System.out.println(lista.get(2));
+       /* for (int i = 0; i < lista.size(); i++)
+       {
+        System.out.println(lista.get(i));
+       }
+       */
+
+       for (String nomes : lista)
+       {
+        System.out.println(nomes);
+       }
     }
     
 
