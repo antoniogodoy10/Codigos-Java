@@ -1,11 +1,16 @@
+import java.util.ArrayList;
+
 public class master {
 
     public static void main(String[] args) {
 
-       int colecaodeInteiros[] = {1,2,3,4,5};
+        ArrayList<String> lista = new ArrayList<>();
 
-       System.out.println(colecaodeInteiros[3]);
+        lista.add("Fernanda"); 
+        lista.add("Leo");
+        lista.add("Antonio");
 
+       System.out.println(lista.get(2));
     }
     
 
