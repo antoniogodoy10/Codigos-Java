@@ -1,26 +1,28 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class master {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in)
 
-        ArrayList<String> lista = new ArrayList<>();
+        Carro meuCarro = new Carro();
 
-        lista.add("Fernanda"); 
-        lista.add("Leo");
-        lista.add("Antonio");
-
-       /* for (int i = 0; i < lista.size(); i++)
-       {
-        System.out.println(lista.get(i));
-       }
-       */
-
-       for (String nomes : lista)
-       {
-        System.out.println(nomes);
-       }
     }
+
+
+    class Carro{
+
+        public Carro()
+        {
+            System.out.println("Carro criado");
+        }
+    }
+
+    
+    
+        
+    
     
 
    
