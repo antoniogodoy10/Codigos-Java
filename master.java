@@ -6,12 +6,18 @@ public class master {
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
-      System.out.println("Digite seu ano de nascimento: ");
-      int anonasc = sc.nextInt();
+      System.out.println("Digite um numero: ");
+      int numero = sc.nextInt();
 
-      int idade = 2025 - anonasc;
+      if (numero % 2 == 0)
+      {
+        System.out.println("O numero eh par");
+      }
+      else
+      {
+        System.out.println("O numero eh impar");
+      }
 
-      System.out.println("Sua idade eh " + idade);
 
     }
 
