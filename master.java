@@ -6,15 +6,15 @@ public class master {
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
-      System.out.println("Digite o primeiro numero: ");
+      System.out.println("Digite a base do triangulo: ");
       int n1 = sc.nextInt();
 
-      System.out.println("Digite o segundo numero: ");
+      System.out.println("Digite a altura do triangulo: ");
       int n2 = sc.nextInt();
 
-      int soma = n1 + n2;
+      int triangulo = n1 * n2;
 
-      System.out.println("O resultado da soma eh " + soma);
+      System.out.println("O resultado da soma eh " + triangulo);
 
     }
 
