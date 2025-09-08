@@ -4,19 +4,13 @@ import java.util.Scanner;
 public class master {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in)
+      Scanner sc = new Scanner(System.in);
 
-        Carro meuCarro = new Carro();
+      System.out.println("Digite seu nome:");
+      String nome = sc.nextLine();
 
-    }
+      System.out.println("Olá, " + nome + "!");
 
-
-    class Carro{
-
-        public Carro()
-        {
-            System.out.println("Carro criado");
-        }
     }
 
     
