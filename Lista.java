@@ -7,25 +7,29 @@ public class Lista
         
         Scanner sc = new Scanner(System.in);
 
-        ArrayList<Integer> lista = new ArrayList<>();
+        ArrayList<String> string = new ArrayList<>();
 
-        int soma = 0;
-
-        for (int i = 1; i <=5; i++)
+        for (int i = 1; i <= 5; i++)
         {
-            System.out.println("Digite o " + i + " numero");
-            int num = sc.nextInt();
-            lista.add(num);
+            System.out.println("Digite o "+ i + " nome");
+            String nomes = sc.nextLine();
+            string.add(nomes);
         }
 
-        System.out.println(lista);
+        System.out.println("Digite o nome que deseja encontrar: ");
+        String encont = sc.nextLine();
 
-        for (int num : lista)
+        boolean achou = string.contains(encont);
+
+        if (achou)
         {
-           soma += num; 
+            System.out.println("O nome procurado esta na lista");
+        }
+        else{
+            System.out.println("O nome procurado nao esta na lista");
         }
 
-        System.out.println("A soma dos numeros eh " + soma);
 
     }
+
 }
