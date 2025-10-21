@@ -2,28 +2,18 @@ import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+   public static void main(String[] args) {
+    
+      System.out.println("Digite uma frase: ");
+      String frase = sc.nextLine();
 
-        String normal = "";
-        String espelho = "";
+      String[] palavras = frase.split(" ");
 
-        int inicio = sc.nextInt();
-        int fim = sc.nextInt();
+      for (int i = palavras.length - 1; i >= 0; i--)
+      {
+         String 
+      }
 
 
-        for (int i = inicio; i <= fim; i++)
-        {
-            normal = normal + i;
-        }
-
-        for (int j = fim; j >= inicio; j--)
-        {
-            String num = String.valueOf(j);
-            String invertido = new StringBuilder(num).reverse().toString();
-            espelho = espelho + invertido;
-        }
-
-        System.out.println(normal + espelho);
-}
-}
+   }
+}  
