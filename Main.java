@@ -1,27 +1,49 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Main
-{
-   public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Enquanto houver casos de teste
+        while (sc.hasNextInt()) {
+            int N = sc.nextInt(); // número de competidores
 
-      Scanner sc = new Scanner (System.in);
-    
-      System.out.println("Digite uma frase: ");
-      String frase = sc.nextLine();
+            int[] largada = new int[N];
+            int[] chegada = new int[N];
+            int[] posicaoChegada = new int[N + 1]; 
+            // usamos N+1 porque os competidores vão de 1 até N
 
-      String[] palavras = frase.split(" ");
+            // Leitura do grid de largada
+            for (int i = 0; i < N; i++) {
+                largada[i] = sc.nextInt();
+            }
 
-      String resultado = "";
+            // Leitura do grid de chegada
+            for (int i = 0; i < N; i++) {
+                chegada[i] = sc.nextInt();
+                posicaoChegada[chegada[i]] = i; 
+                // guarda a posição final de cada competidor
+            }
 
-      for (int i = palavras.length - 1; i >= 0; i--)
-      {
-         String teste = palavras[i];
-         String invertido = new StringBuilder(teste).reverse().toString();
-         resultado += invertido + " ";
+            // Agora criamos o vetor 'ordem' com base nas posições de chegada
+            int[] ordem = new int[N];
+            for (int i = 0; i < N; i++) {
+                ordem[i] = posicaoChegada[largada[i]];
+            }
 
-      }
+            // Contar inversões (ultrapassagens)
+            int ultrapassagens = 0;
+            for (int i = 0; i < N; i++) {
+                for (int j = i + 1; j < N; j++) {
+                    if (ordem[i] > ordem[j]) {
+                        ultrapassagens++;
+                    }
+                }
+            }
 
-      System.out.println(resultado);
+            System.out.println(ultrapassagens);
+        }
 
-   }
-}  
+        sc.close();
+    }
+}
