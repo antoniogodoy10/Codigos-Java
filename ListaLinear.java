@@ -81,6 +81,15 @@ public class ListaLinear {
         return elem;
     }
 
+    public void inverterIterativo() {
+    for (int i = 0; i < tamanho / 2; i++) {
+        int temp = elementos[i];
+        elementos[i] = elementos[tamanho - 1 - i];
+        elementos[tamanho - 1 - i] = temp;
+    }
+}
+
+
     // Mostrar elementos
     public void mostrar() {
         System.out.print("[ ");
