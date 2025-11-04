@@ -2,17 +2,23 @@ class Lista {
     CelulaLista inicio;
     CelulaLista fim;
 
-    public CelulaLista maiorPilha() {
-        if (inicio == null) return null; // lista vazia
+    public CelulaLista maiorPilha()
+    {
+        if (inicio == null)
+        {
+            return null;
+        }
 
         CelulaLista atual = inicio;
-        CelulaLista maiorCelula = inicio;
+        CelulaLista maiortam = inicio;
         int maiorTam = contarPilha(inicio.topo);
 
-        while (atual != null) {
+        while (atual != null)
+        {
             int tamAtual = contarPilha(atual.topo);
 
-            if (tamAtual > maiorTam) {
+            if (tamAtual > maiorTam)
+            {
                 maiorTam = tamAtual;
                 maiorCelula = atual;
             }
@@ -23,13 +29,16 @@ class Lista {
         return maiorCelula;
     }
 
-    private int contarPilha(CelulaPilha topo) {
+    private int contarPilha(CelulaPilha topo)
+    {
         int cont = 0;
         CelulaPilha p = topo;
-        while (p != null) {
+        while (p != null)
+        {
             cont++;
             p = p.prox;
         }
         return cont;
     }
+
 }
