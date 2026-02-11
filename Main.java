@@ -2,42 +2,36 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt(); // número de casos de teste
 
-        for (int caso = 0; caso < N; caso++) {
-            int M = sc.nextInt(); // número de alunos
-            int[] notas = new int[M];
-            int[] copia = new int[M];
+        int[] vetor = new int[5];
+        int x, cont = 0;
 
-            // leitura das notas
-            for (int i = 0; i < M; i++) {
-                notas[i] = sc.nextInt();
-                copia[i] = notas[i]; // guarda cópia original
-            }
+        System.out.println("Preencha o vetor com 5 numeros: ");
 
-            // ordenação decrescente manual (Bubble Sort)
-            for (int i = 0; i < M - 1; i++) {
-                for (int j = 0; j < M - 1 - i; j++) {
-                    if (notas[j] < notas[j + 1]) {
-                        int aux = notas[j];
-                        notas[j] = notas[j + 1];
-                        notas[j + 1] = aux;
-                    }
-                }
-            }
-
-            // contar quantos ficaram na mesma posição
-            int iguais = 0;
-            for (int i = 0; i < M; i++) {
-                if (notas[i] == copia[i]) {
-                    iguais++;
-                }
-            }
-
-            System.out.println(iguais);
+        for (int i = 0; i < 5; i++)
+        {
+           vetor[i] = sc.nextInt();
         }
 
-        sc.close();
+        System.out.println("Digite um valor para x: ");
+        x = sc.nextInt();
+
+        for (int j = 0; j < 5; j++)
+        {
+            if (x == vetor[j])
+            {
+                cont++;
+            }
+        }
+
+        if (cont >= 1)
+        {
+        System.out.println("O valor de x foi encontrado dentro do vetor");
+        }
+        else{
+            System.out.println("O valor de x nao foi encontrado dentro do vetor");
+        }
     }
 }
