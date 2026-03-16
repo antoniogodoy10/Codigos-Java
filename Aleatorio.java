@@ -9,6 +9,22 @@ public class Aleatorio {
 
     char letra1 = (char)('a' + (Math.abs(gerador.nextInt()) % 26));
     char letra2 = (char)('a' + (Math.abs(gerador.nextInt()) % 26));
+
+    for (int i = 0; i < str1.length(); i++)
+    {
+        char c = str1.charAt(i);
+
+        if (c == letra1)
+        {
+            str2 += letra2;
+        }
+        else
+        {
+            str2 += c;
+        }
+    }
+
+    return str2;
     }
     public static void main(String args[]){
 
@@ -18,9 +34,7 @@ public class Aleatorio {
     
     String resultado = AlteraString(str1);
 
-
-
-
+    System.out.println(resultado);
 
     }
 }
