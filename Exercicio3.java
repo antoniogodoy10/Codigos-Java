@@ -1,6 +1,28 @@
 import java.util.*;
 public class Exercicio3
 {
+    public static boolean Real(String str)
+    {
+        int separador = 0;
+        for (int i = 0; i < str.length(); i++)
+        {
+            char c = str.charAt(i);
+            if (c == '.' || c == ',')
+            {
+                separador++;
+                if (separador > 1)
+                {
+                    return false;
+                }
+            }
+            if (c < '0' || c > '9')
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     //criação do metodo Inteiros
     public static boolean Inteiros(String str)
     {
@@ -87,6 +109,15 @@ public class Exercicio3
             System.out.print("NAO ");
         }
            str = sc.nextLine(); 
+        if (Real(str))
+        {
+            System.out.println("SIM");
+        }
+        else
+        {
+            System.out.println("NAO");
+        }
+
     }
 }
 }
