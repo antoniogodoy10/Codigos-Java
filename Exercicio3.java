@@ -2,26 +2,29 @@ import java.util.*;
 public class Exercicio3
 {
     public static boolean Real(String str)
+{
+    int separador = 0;
+
+    for (int i = 0; i < str.length(); i++)
     {
-        int separador = 0;
-        for (int i = 0; i < str.length(); i++)
+        char c = str.charAt(i);
+
+        if (c == '.' || c == ',')
         {
-            char c = str.charAt(i);
-            if (c == '.' || c == ',')
-            {
-                separador++;
-                if (separador > 1)
-                {
-                    return false;
-                }
-            }
-            if (c < '0' || c > '9')
+            separador++;
+            if (separador > 1)
             {
                 return false;
             }
         }
-        return true;
+        else if (c < '0' || c > '9')
+        {
+            return false;
+        }
     }
+
+    return true;
+}
 
     //criação do metodo Inteiros
     public static boolean Inteiros(String str)
@@ -34,13 +37,17 @@ public class Exercicio3
                 
                 return false;
             }
-            //condição para ver se o numero é inteiro
-            if (c >= '0' && c <= '9')
+        }
+        for (int i = 0; i < str.length(); i++)
+        {
+            char c = str.charAt(i);
+           if(c >= '0' && c <= '9')
             {
                 return true;
             }
         }
         return false;
+
     }
     //criação do metodo Consoantes 
     public static boolean Consoantes(String str){
