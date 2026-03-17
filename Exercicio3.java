@@ -29,6 +29,11 @@ public class Exercicio3
         for (int i = 0; i < str.length(); i++)
         {
             char c = str.charAt(i);
+            if (c == '.' || c == ',')
+            {
+                
+                return false;
+            }
             //condição para ver se o numero é inteiro
             if (c >= '0' && c <= '9')
             {
@@ -108,7 +113,7 @@ public class Exercicio3
         {
             System.out.print("NAO ");
         }
-           str = sc.nextLine(); 
+            
         if (Real(str))
         {
             System.out.println("SIM");
@@ -117,6 +122,7 @@ public class Exercicio3
         {
             System.out.println("NAO");
         }
+        str = sc.nextLine();
 
     }
 }
