@@ -105,6 +105,7 @@ public static boolean Senha(String str){
         {
             System.out.println("NAO");
         }
+        str = sc.nextLine();
     }
 }
 }
